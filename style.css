@@ -576,6 +576,7 @@ html,body{
 }
 
 #footer {
+    max-width: 328px;
     background-color: #f8f8f8;
     color: #000000;
     padding: 1vh 0;
@@ -946,7 +947,20 @@ html,body{
     #page-6{
         display: none;
     }
+    
     #footer{
         font-size: 2vh;
+    }
+
+    .footer-section ul,p{
+        display: none;
+    }
+
+    .footer-section h3{
+        display: none;
+    }
+
+    .footer-bottom p{
+        display: block;
     }
 }
