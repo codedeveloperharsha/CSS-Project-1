@@ -71,17 +71,21 @@ html,body{
     font-weight: 600;
 }
 
-#nav h2:nth-last-child(2){
+#nav h2:nth-last-child(3){
     /* background-color: blue; */
     width: 23%;
     justify-content: start;
 }
 
-#nav h2:nth-last-child(1){
+#nav h2:nth-last-child(2){
     font-size: 2vw;
     font-weight: 900;
     border: none;
     padding: 0 4vw 0 0;
+}
+
+#nav h3{
+    display: none;
 }
 
 #center{
@@ -108,8 +112,10 @@ html,body{
 
 #overlay{
     height: 40%;
-    width: 100%;
+    width: fit-content;
+    margin: 0 0 5vh 5vh;
     /* background-color: crimson; */
+
     position: absolute;
     bottom: 0;
     padding: 3vh;
@@ -137,7 +143,6 @@ html,body{
     margin: 0 2vw 0 0;
 }
 
-
 #overlay-1 h1{
     font-size: 3vw;
     text-transform: uppercase;
@@ -146,18 +151,6 @@ html,body{
     /* -webkit-text-stroke: 2px black; */
     font-family: 'Monument Extended';
     margin: 0 1vw;
-}
-
-#overlay-1 h2{
-    color: #000000;
-    padding: 2vw 2.1vw;
-    display: flex;
-    align-items: center;
-    /* background-color: #FFFFFF; */
-    border-radius: 50%;
-    font-size: 4vw;
-    color: #F8F8F8;
-    border: .51vh solid #f33737;
 }
 
 #scroll{
@@ -204,14 +197,14 @@ html,body{
 }
 
 #alphabets-container{
-    height: 11vh;
+    height: 5vw;
     width: 100%;
     /* background-color: rgb(1, 103, 69); */
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 1vw;
-    font-size: 1.2vw;
+    font-size: 1.5vh;
     overflow: auto;
     border-top: 0.31vh solid black;
     border-bottom: 0.31vh solid black;
@@ -428,7 +421,6 @@ html,body{
     object-fit: cover;
 }
 
-
 #page-4-part-2-text-content{
     display: flex;
     justify-content: space-between;
@@ -539,7 +531,6 @@ html,body{
     margin: 2vh 6vw 0 0;
 }
 
-
 #scroll-2 {
     width: 100%;
     height: 7vw;
@@ -587,7 +578,7 @@ html,body{
 #footer {
     background-color: #f8f8f8;
     color: #000000;
-    padding: 2rem 0;
+    padding: 1vh 0;
 }
 
 .footer-container {
@@ -599,17 +590,19 @@ html,body{
 
 .footer-section {
     flex: 1;
-    padding: 0 1rem;
+    padding: 0 3vh;
+    margin-top: 2vh;
 }
 
 .footer-section h3 {
-    border-bottom: 2px solid #000000;
-    margin-bottom: 1rem;
+    border-bottom: 0.31vh solid #000000;
+    margin-bottom: 1vh;
 }
 
 .footer-section p,
 .footer-section ul {
-    margin: 0.5rem 0;
+    margin: 0.5vh 0;
+    line-height: 3vh;
     list-style: none;
 }
 
@@ -633,4 +626,327 @@ html,body{
 }
 
 
+@media (max-width:768px) {
+    
+    #main{
+        width: 100%;
+        height: 100vh;
+        background-color: #F8F8F8;
+        padding: 1px 0 0 0;
+        position: relative;
+        overflow-x: hidden;
+    }
 
+    #nav{
+        height: 7vh;
+        margin: 0vh 0 0 0;
+    }
+
+    @font-face {
+        font-family: 'Monument Extended';
+        src: url('fonts/MonumentExtended-Ultrabold.otf') format('opentype');
+    }
+
+    #nav h1{
+        /* background-color: crimson; */
+        height: 100%;
+        width: 25%;
+        /* display: flex;
+        align-items: center;
+        justify-content: center; */
+        font-size: 4vw;
+        font-weight: 900;
+        font-family: 'Monument Extended';
+        letter-spacing: -.12vw;
+        position: relative;
+        margin: 0;
+    }
+
+    #nav h1::after{
+        position: absolute;
+        top: 35%;
+        right: 2%;
+        font-size: 1.2vw;
+        content: "©️";
+        margin-left: 0.2vw;
+    }
+
+    #nav h2{
+        display: none;
+        /* height: 100%;
+        background-color: crimson;
+        width: 17%;
+        display: None;
+        align-items: center;
+        font-size: 1.8vw;
+        justify-content: center;
+        border-right: 0.2vw solid #000000;
+        background-color: greenyellow;
+        font-weight: 600; */
+    }
+
+    #nav h3{
+        display: flex;
+        margin-right: 1.5vw;
+    }
+
+    #center{
+        /* background-color: aqua; */
+        height: 50%;
+        width: 99%;
+        padding: 3vh 1vw;
+    }
+    
+    #content{
+        height: 100%;
+        width: 100%;
+        /* background: cadetblue; */
+        position: relative;
+        overflow: hidden;
+    }
+    
+    #content img{
+        position: absolute;
+        object-fit: cover;
+        width: 100%;
+        height: 150%;
+    }
+    
+    #overlay{
+        height: 40%;
+        width: 100%;
+        /* background-color: crimson; */
+        position: absolute;
+        bottom: 0;
+        padding: 3vh;
+        background-color: transparent;
+        backdrop-filter: blur(0px);
+    }
+    
+    #overlay-1{
+        display: flex;
+        justify-content: space-between;
+        color: #FFFFFF;
+        padding: 0 0 2vh 0;
+    }
+    
+    #overlay-2{
+        font-size: 1vw;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: white;
+        font-family: 'Monument Extended';
+        margin: 0 1vw;
+    }
+    
+    #overlay-2 h4{
+        margin: 0 2vw 0 0;
+    }
+    
+    
+    #overlay-1 h1{
+        font-size: 3vw;
+        text-transform: uppercase;
+        font-weight: 900;
+        color: #F8F8F8;
+        /* -webkit-text-stroke: 2px black; */
+        font-family: 'Monument Extended';
+        margin: 0 1vw;
+    }
+        
+    #scroll{
+        width: 100%;
+        height: 20vh;
+        background-color: #F8F8F8;
+        white-space: nowrap;
+        overflow: hidden;
+        /* overflow-y: hidden; */
+        display: flex;
+        align-items: center;
+    }
+
+    #image-container{
+        display: flex;
+        animation-name: image-scroll-animation;
+        animation-duration: 20s;
+        animation-delay: 1s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        /* animation: image-scroll-animation 20s linear infinite; */
+        /* height: 100%;
+        width: 100%;
+        background-color: crimson;
+        display: inline-block;
+        padding: 2vh; */
+    }
+
+    #image-container img{
+        height: 15vw;
+        border-radius: 50%;
+        width: 15vw;
+        object-fit: cover;
+        margin: 0 0.4vw;
+    }
+    
+    #page-2{
+        height: 100%;
+        width: 100%;
+        /* background-color: bisque; */
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        padding: 1.1vw 1.5vw 0 2.5vw;
+        display: none;
+    }
+
+    #page-2-part-1{
+        height: 45%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: space-between;
+    }
+
+    #page-2-part-1 h1{
+        font-family: 'Monument Extended';
+        padding: 1.6vh 0 0 2vh;
+        font-size: 5vh;
+        letter-spacing: -0.05vw;
+        top: 0;
+    }
+
+    #page-2-part-1 img{
+        height: 100%;
+        width: 90%;
+        object-fit: cover;
+    }
+
+    #page-2-part-2{
+        height: 56%;
+        width: 50%;
+        margin: 1vh 0 0 1vh;
+    }
+
+    #page-2-part-2 img{
+        height: 70%;
+        width: 90%;
+        object-fit: cover;
+    }
+
+    #page-2-part-2-text-content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #page-2-part-2-text-content h1{
+        width: 40vw;
+        font-size: 4vh;
+        font-family: 'Monument Extended';
+        padding-top: 2vh;
+    }
+
+    #page-2-part-2-text-content p{
+        width: 40vw;
+        margin: 2vh 6vw 0 2vw;
+    }
+
+    #page-3{
+        height: fit-content;
+        width: 100%;
+        position: relative;
+        /* background-color: aquamarine; */
+        padding: 0.1px;
+    }
+    
+    #page-3>h1{
+        font-family: 'Monument Extended';
+        margin: 2vw;
+        text-align: center;
+        font-size: 4.5vh;
+        /* background-color: red; */
+    }
+
+    .elem{
+        height: 10vh;
+        width: 94.5vw;
+        margin: 0 2vw;
+        position: relative;
+        border-top: 2px solid black;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2vw;
+    }
+    
+    .elem:nth-last-child(1){
+        border-bottom: none;
+    }
+    
+    .elem h4{
+        font-size: 1.62vw;
+        font-weight: 700;
+        text-transform: uppercase;
+        width: 5vw;
+        /* background-color: red; */
+    }
+    
+    .elem .elem-part-2{
+        /* background-color: crimson; */
+        width: 40%;
+    }
+    
+    .elem-part-2 h1{
+        font-size: 3vw;
+        font-weight: 700;
+        margin: 0;
+        /* background-color: red; */
+    }
+    
+    .elem-part-2 h5{
+        font-size: 1.2vw;
+        margin: 0;
+        text-transform: uppercase;
+        /* background-color: red; */
+    }
+    
+    .elem img{
+        height: 6vw;
+        width: 6vw;
+        position: absolute;
+        border-radius: 50%;
+        object-fit: cover;
+        left: 5vw;
+        opacity: 0;
+        transition: all ease 0.8s;
+    }
+    
+    .elem:hover img{
+        opacity: 1;
+        left: 25vw;
+    }
+    
+    .elem-part-2 h5:hover{
+        font-size: 1.2vw;
+        margin: 0;
+        text-transform: uppercase;
+        color: tomato;
+        /* background-color: red; */
+    }
+    
+    #page-4{
+        display: none;
+    }
+
+    #page-5{
+        display: none;
+    }
+
+    #page-6{
+        display: none;
+    }
+    #footer{
+        font-size: 2vh;
+    }
+}
