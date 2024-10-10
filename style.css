@@ -306,7 +306,7 @@ html,body{
 
 #page-3>h1{
     font-family: 'Monument Extended';
-    margin: 2vw;
+    margin: 2vh;
     text-align: center;
     /* background-color: red; */
 }
@@ -576,7 +576,6 @@ html,body{
 }
 
 #footer {
-    max-width: 328px;
     background-color: #f8f8f8;
     color: #000000;
     padding: 1vh 0;
@@ -591,8 +590,7 @@ html,body{
 
 .footer-section {
     flex: 1;
-    padding: 0 3vh;
-    margin-top: 2vh;
+    padding: 0 3vw;
 }
 
 .footer-section h3 {
@@ -602,8 +600,7 @@ html,body{
 
 .footer-section p,
 .footer-section ul {
-    margin: 0.5vh 0;
-    line-height: 3vh;
+    margin: 0.5rem 0;
     list-style: none;
 }
 
@@ -947,16 +944,12 @@ html,body{
     #page-6{
         display: none;
     }
-    
+
     #footer{
         font-size: 2vh;
     }
 
-    .footer-section ul,p{
-        display: none;
-    }
-
-    .footer-section h3{
+    .footer-section h3, p, ul{
         display: none;
     }
 
