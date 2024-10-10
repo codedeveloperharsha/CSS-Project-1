@@ -41,9 +41,21 @@ html,body{
     display: flex;
     align-items: center;
     justify-content: center;
+    font-size: 2.6vw;
     font-weight: 900;
     font-family: 'Monument Extended';
     letter-spacing: -.12vw;
+    position: relative;
+    margin: 0;
+}
+
+#nav h1::after{
+    position: absolute;
+    top: 10%;
+    right: 2%;
+    font-size: 1.2vw;
+    content: "©️";
+    margin-left: 0.2vw;
 }
 
 #nav h2{
@@ -52,7 +64,7 @@ html,body{
     width: 17%;
     display: flex;
     align-items: center;
-    font-size: 3vh;
+    font-size: 1.8vw;
     justify-content: center;
     border-right: 0.2vw solid #000000;
     /* background-color: greenyellow; */
@@ -61,7 +73,7 @@ html,body{
 
 #nav h2:nth-last-child(2){
     /* background-color: blue; */
-    width: 19%;
+    width: 23%;
     justify-content: start;
 }
 
@@ -101,8 +113,8 @@ html,body{
     position: absolute;
     bottom: 0;
     padding: 3vh;
-    background-color: rgba(0, 0, 0, 0.104);
-    backdrop-filter: blur(3px);
+    background-color: transparent;
+    backdrop-filter: blur(0px);
 }
 
 #overlay-1{
@@ -113,10 +125,12 @@ html,body{
 }
 
 #overlay-2{
-    display: flex;
-    color: #FFFFFF;
-    padding: 2vh 0 0 0;
-    border-top: 0.51vh #FFFFFF solid;
+    font-size: 1vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: white;
+    font-family: 'Monument Extended';
+    margin: 0 1vw;
 }
 
 #overlay-2 h4{
@@ -125,18 +139,25 @@ html,body{
 
 
 #overlay-1 h1{
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #F8F8F8;
+    /* -webkit-text-stroke: 2px black; */
     font-family: 'Monument Extended';
+    margin: 0 1vw;
 }
 
 #overlay-1 h2{
-    color: #FFFFFF;
-    padding: 1.1vw 2.1vw;
+    color: #000000;
+    padding: 2vw 2.1vw;
     display: flex;
     align-items: center;
     /* background-color: #FFFFFF; */
     border-radius: 50%;
-    font-size: 3vw;
-    border: 0.3vh solid #000000;
+    font-size: 4vw;
+    color: #F8F8F8;
+    border: .51vh solid #f33737;
 }
 
 #scroll{
@@ -244,7 +265,7 @@ html,body{
     font-family: 'Monument Extended';
     padding: 1.6vh 0 0 0;
     font-size: 5vh;
-    letter-spacing: -0.15vw;
+    letter-spacing: -0.05vw;
 }
 
 #page-2-part-1 img{
@@ -271,14 +292,15 @@ html,body{
 }
 
 #page-2-part-2-text-content h1{
-    width: 30vw;
+    width: 40vw;
+    font-size: 4vh;
     font-family: 'Monument Extended';
     padding-top: 2vh;
 }
 
 #page-2-part-2-text-content p{
-    width: 30vw;
-    margin: 2vh 6vw 0 0;
+    width: 40vw;
+    margin: 2vh 6vw 0 2vw;
 }
 
 #page-3{
@@ -517,4 +539,99 @@ html,body{
     width: 30vw;
     margin: 2vh 6vw 0 0;
 }
+
+
+#scroll-2 {
+    width: 100%;
+    height: 7vw;
+    /* background-color: crimson; */
+    white-space: nowrap;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    border-top: 2px solid black; /* Black top border */
+    border-bottom: 2px solid black; /* Black bottom border */
+}
+
+#scroll-2-text-container {
+    display: flex;
+    animation-name: text-scroll-animation;
+    animation-duration: 20s;
+    animation-delay: 0.31s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroll-text {
+    display: flex; /* Make sure the text is in a flex container */
+}
+
+#scroll-text h1 {
+    font-size: 3vw;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px black;
+    font-family: 'Monument Extended';
+    margin: 0 1vw;
+}
+
+@keyframes text-scroll-animation {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+#footer {
+    background-color: #f8f8f8;
+    color: #000000;
+    padding: 2rem 0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 1rem;
+}
+
+.footer-section h3 {
+    border-bottom: 2px solid #000000;
+    margin-bottom: 1rem;
+}
+
+.footer-section p,
+.footer-section ul {
+    margin: 0.5rem 0;
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin: 0.5rem 0;
+}
+
+.footer-section ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #F8F8F8;
+}
+
+
 
